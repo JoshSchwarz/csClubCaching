@@ -24,6 +24,7 @@ $sql =<<<EOF
   FIRSTNAME      TEXT     NOT NULL,
   LASTNAME 		 TEXT 	  NOT NULL,
   EMAIL          TEXT     NOT NULL,
+  SUM 			 INT,
   ROOM1 		 INT);
 EOF;
 
