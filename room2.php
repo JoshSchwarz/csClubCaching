@@ -39,30 +39,27 @@ $row = $exists->fetchArray();
 if ($row != false) {
 	
 	//Checks if user has already visited.
-	$sql = $db->prepare('SELECT * FROM rooms WHERE room1 = 1 AND sessionid = :id;');
-	$sql->bindValue(':id', $curSessID);
+	$sql = $db->prepare('SELECT * FROM rooms WHERE :currentRoom = 1');
+	$sql->bindValue(':currentRoom', $currRoom);
 	$visited = $sql->execute();
 	
 	//If user hasnt visited, database is updated, setting -roomID- to 1.
 	$row = $visited->fetchArray();
 	if($row == false) {
-		print "User hasnt been here";
 		//NOTE: after 'SET' should be a roomID matching a column in the database. Check -setup.php- for a list of room ID's.
-		$q = $db->prepare('UPDATE rooms SET room1 = 1 WHERE SESSIONID = :id;'); 
+		$q = $db->prepare('UPDATE rooms SET room2 = 1 WHERE SESSIONID = :id;'); 
 		$q->bindValue(':id', $curSessID);
 		$q->execute();
 		
 		$r = $db->prepare('UPDATE rooms SET sum = sum + 1 WHERE SESSIONID = :id;'); 
 		$r->bindValue(':id', $curSessID);
 		$r->execute();
-	}	else {
-		print "User has been here";
-	}
+	}	
 }?>
 
 <body>
 
-Room 1 information.
+Room 2 information.
 
 </body>
 </html>

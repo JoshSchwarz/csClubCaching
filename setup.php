@@ -24,8 +24,9 @@ $sql =<<<EOF
   FIRSTNAME      TEXT     NOT NULL,
   LASTNAME 		 TEXT 	  NOT NULL,
   EMAIL          TEXT     NOT NULL,
-  SUM 			 INT,
-  ROOM1 		 INT);
+  SUM 			 INT	  NOT NULL 		DEFAULT 0,
+  ROOM1 		 INT,
+  ROOM2 		 INT);
 EOF;
 
 $ret = $db->exec($sql);

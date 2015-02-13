@@ -26,9 +26,9 @@ if(isset($_POST['submit'])) {
 		print "You already exist";
 		
 	} else {
-		$first = SQLite3::escapeString($_POST['first']);
-		$last = SQLite3::escapeString($_POST['last']);
-		$email = SQLite3::escapeString($_POST['email']);
+		$first = $_POST['first'];
+		$last = $_POST['last'];
+		$email = $_POST['email'];
 	
 		$sql = "INSERT INTO rooms (SESSIONID,FIRSTNAME,LASTNAME,EMAIL) VALUES (:curSessID,:first,:last,:email)"; 
 		$q = $db->prepare($sql); 
