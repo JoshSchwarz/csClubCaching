@@ -10,7 +10,7 @@
    {
       function __construct()
       {
-	 $this->open('./rooms/store.db');
+	 		 $this->open('../db/store.db');
 
       }
    }

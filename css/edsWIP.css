@@ -105,10 +105,6 @@ ul {
 	background-color: #8cc8dd;
 }
 
-.nav_wid {
-	width: 50em;
-}
-
 .nav_opt {
 	display: table-cell;
 	width: 20%;
@@ -147,6 +143,25 @@ input[type="submit"] {
     line-height: 2em;
 }
 
+.menu {
+	vertical-align: middle;
+	width: 2.5em;
+	padding: 0.5em;
+}
+
+.menu:hover {
+	cursor: pointer;
+}
+
+#page_name {
+	display: inline-block;
+	width: calc(100% - 4em);
+	text-align: center;
+	color: #FFF;
+	vertical-align: middle;
+	font-size: 2em;
+	font-weight: 300;
+}
 
 
 /*------- CONTENT -------*/
@@ -159,11 +174,6 @@ input[type="submit"] {
 	font-weight: 400;
 	font-size: 1em;
 }
-
-.content_wid {
-	width: 50em;
-}
-
 
 
 /*------- FOOTER -------*/
@@ -196,13 +206,43 @@ input[type="submit"] {
 
 /*------- WINDOW SIZE MANAGEMENT -------*/
 @media only screen and (max-width: 768px) {
-    #title {
-    	font-size: 7vw;
+    .nav_opt {
+    	display: none;
     }
-    .cont {
-    	margin: 0;
+    .content_wid {
+		padding: 0 1em;
+	}
+	.header {
+		margin: 0;
+		height: 1%;
+	}
+	.cont {
+		height: initial;
+	}
+	.logo {
+		width: 25vw;
+	}
+	#title {
+		font-size: 15vw;
+	}
+	#subtitle {
+		font-size: 5vw;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+    .menu {
+    	visibility: hidden;
+    	position: absolute;
     }
-    .logo {
-    	width: 18vw;
+    #page_name {
+    	visibility: hidden;
+    	position: absolute;
     }
+    .content_wid {
+		width: 50em;
+	}
+	.nav_wid {
+		width: 50em;
+	}
 }
