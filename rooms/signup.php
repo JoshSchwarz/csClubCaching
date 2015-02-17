@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
 	{
 		function __construct()
 		{
-			$this->open('store.db');
+			$this->open('./rooms/store.db');
 		}
 	}
 	

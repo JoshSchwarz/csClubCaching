@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Table Dump</title>
 </head>
 
 <?php
@@ -10,7 +10,8 @@
    {
       function __construct()
       {
-         $this->open('store.db');
+	 $this->open('./rooms/store.db');
+
       }
    }
    $db = new MyDB();
@@ -22,11 +23,9 @@ EOF;
    $ret = $db->query($sql);
    while($row = $ret->fetchArray() ){
       echo "ID = ". $row['SESSIONID'] . "<br>";
-      echo "NAME = ". $row['FIRSTNAME'] . $row['LASTNAME'] ."<br>";
+      echo "NAME = ". $row['FIRSTNAME'] . " " . $row['LASTNAME'] ."<br>";
       echo "EMAIL = ". $row['EMAIL'] ."<br>";
-      echo "SUM =  ". $row['SUM'] ."<br>";
-	  echo "ROOM1 =  ". $row['ROOM1'] ."<br>";
-	  echo "ROOM2 =  ". $row['ROOM2'] ."<br><br>";
+      echo "SUM =  ". $row['SUM'] ."<br><br>";
    }
    $db->close();
 ?>

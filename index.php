@@ -20,17 +20,23 @@ session_start();
 
 <html>
 <head>
-<meta charset="utf-8">
-<title>Index</title>
+	<meta charset="utf-8">
+	<title>Computer Science Club O-Week</title>
+
+	<link href="./css/styles.css" type="text/css" rel="stylesheet"></link>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="./img/favicon1.png" type="image/x-icon" />
 </head>
 
 <body>
 	<?php 
-		if(!empty($_GET['page'])) {
-			require($_GET['page'] . ".php"); 
-		} else {
-			require("home" . ".php");
-		}
+	if(!empty($_GET['page'])) {
+		require("./rooms/" . $_GET['page'] . ".php"); 
+	} else {
+		require("./rooms/home.php");
+	}
 	?> 
 </body>
 </html>

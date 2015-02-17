@@ -11,8 +11,8 @@ Code by Josh Schwarz
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Sample Room</title>
+	<meta charset="utf-8">
+	<title>Sample Room</title>
 </head>
 
 <?php
@@ -24,7 +24,8 @@ class MyDB extends SQLite3
 {
 	function __construct()
 	{
-		$this->open('store.db');
+		 $this->open('./rooms/store.db');
+
 	}
 }
 $db = new MyDB();
@@ -46,7 +47,6 @@ if ($row != false) {
 	//If user hasnt visited, database is updated, setting -roomID- to 1.
 	$row = $visited->fetchArray();
 	if($row == false) {
-		print "User hasnt been here";
 		//NOTE: after 'SET' should be a roomID matching a column in the database. Check -setup.php- for a list of room ID's.
 		$q = $db->prepare('UPDATE rooms SET room1 = 1 WHERE SESSIONID = :id;'); 
 		$q->bindValue(':id', $curSessID);
@@ -55,14 +55,12 @@ if ($row != false) {
 		$r = $db->prepare('UPDATE rooms SET sum = sum + 1 WHERE SESSIONID = :id;'); 
 		$r->bindValue(':id', $curSessID);
 		$r->execute();
-	}	else {
-		print "User has been here";
 	}
 }?>
 
 <body>
 
-Room 1 information.
+	Room 1 information.
 
 </body>
 </html>
