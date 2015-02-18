@@ -55,7 +55,6 @@ ul {
 	display: table;
 	width: 100%;
 	height: calc(20% - 2em);
-	/*min-width: 900px;*/
 	background-color: #ffffff;
 	margin: 1em 0 1em 0;
 }
@@ -74,20 +73,17 @@ ul {
 	padding: 0 0 0 1em;
 	vertical-align: middle;
 	display: table-cell;
-	/*width: 100%;*/
 }
 
-#title {
+.title {
 	color: #000000;
-	/*min-width: 350px;*/
 	font-size: 4em;
 	font-weight: 100;
 	line-height: 1em;
 }
 
-#subtitle {
+.subtitle {
 	color: #777777;
-	/*min-width: 350px;*/
 	font-size: 1.6em;
 	font-weight: 100;
 	line-height: 1.5em;
@@ -100,7 +96,7 @@ ul {
 	font-family: 'Roboto', sans-serif;
 	display: table;
 	width: 100%;
-	height: 5%;
+	height: 1px;
 	max-height: 1em;
 	background-color: #8cc8dd;
 }
@@ -123,26 +119,6 @@ ul {
 	background: #ceecf7;
 }
 
-.searchbar {
-	padding: 0 0 0 1em;
-	width: 100%;
-	min-width: 270px;
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
-}
-
-input[type="text"] {
-    width: 25%;
-    min-width: 15em;
-    display: inline;
-    padding: 0.5em;
-}
-
-input[type="submit"] {
-    line-height: 2em;
-}
-
 .menu {
 	vertical-align: middle;
 	width: 2.5em;
@@ -159,7 +135,7 @@ input[type="submit"] {
 	text-align: center;
 	color: #FFF;
 	vertical-align: middle;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 300;
 }
 
@@ -173,6 +149,8 @@ input[type="submit"] {
 	padding: 1em 0;
 	font-weight: 400;
 	font-size: 1em;
+	border-bottom: solid 1px #8CC8DD;
+	border-top: solid 1px #8CC8DD;
 }
 
 
@@ -181,7 +159,7 @@ input[type="submit"] {
 	text-transform: uppercase;
 	display: table;
 	width: 100%;
-	height: calc(5% - 1em);
+	height: 10%;
 	color: #999999;
 	font-weight: 300;
 	text-align: center;
@@ -206,10 +184,14 @@ input[type="submit"] {
 
 /*------- WINDOW SIZE MANAGEMENT -------*/
 @media only screen and (max-width: 768px) {
-    .nav_opt {
-    	display: none;
-    }
-    .content_wid {
+	.nav_opt {
+		display: none;
+		position: fixed;
+	}
+	.navbar {
+		height: 1px;
+	}
+	.cont_wid {
 		padding: 0 1em;
 	}
 	.header {
@@ -222,27 +204,35 @@ input[type="submit"] {
 	.logo {
 		width: 25vw;
 	}
-	#title {
+	.title {
 		font-size: 15vw;
 	}
-	#subtitle {
+	.lrg {
+		visibility: hidden;
+		position: fixed;
+	}
+	.subtitle {
 		font-size: 5vw;
+	}
+	.content {
+		border-bottom: solid 1px #8CC8DD;
 	}
 }
 
 @media only screen and (min-width: 769px) {
-    .menu {
-    	visibility: hidden;
-    	position: absolute;
-    }
-    #page_name {
-    	visibility: hidden;
-    	position: absolute;
-    }
-    .content_wid {
+	.menu {
+		visibility: hidden;
+		position: fixed;
+	}
+	#page_name {
+		visibility: hidden;
+		position: fixed;
+	}
+	.cont_wid {
 		width: 50em;
 	}
-	.nav_wid {
-		width: 50em;
+	.sml {
+		visibility: hidden;
+		position: fixed;
 	}
 }

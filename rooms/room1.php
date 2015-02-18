@@ -30,7 +30,7 @@ class MyDB extends SQLite3
 {
 	function __construct()
 	{
-		 $this->open('../db/store.db');
+		$this->open('../db/store.db');
 
 	}
 }
@@ -66,48 +66,38 @@ if ($row != false) {
 
 <body>
 	<div class="container">
+
 		<!-- Header -->
 		<div class="header">
 			<div class="cont">
 				<div class="logo_cont">
-					<img class="logo" src="../img/compsci_logo.svg">
+					<img class="logo" src="../img/logo.svg">
 				</div>
 				<div class="title_cont">
-					<div id="title">
+					<div class="title lrg">
 						Room1
 					</div>
-					<div id="subtitle">
-						// O'Week 2015
+					<div class="title sml">
+						Rm1
+					</div>
+					<div class="subtitle lrg">
+						// Computer Science Club
+					</div>
+					<div class="subtitle sml">
+						// CS Club
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Navbar -->
-		<div class="navbar">
-				<img class="menu" src="../img/menu.svg">
-				<div id="page_name" class="cont"></div>
-				<div class="cont nav_wid">
-					<div class="nav_opt current">Home</div>
-					<div class="nav_opt">News</div>
-					<div class="nav_opt">Tutorials</div>
-					<div class="nav_opt">Calendar</div>
-					<div class="nav_opt">Contact</div>
-					<!-- <form class="searchbar">
-						<input type="text" name="search" placeholder="Search">
-						<input type="submit" name="submit" value="Go">
-					</form> -->
-				</div>
-		</div>
-
 		<!-- Content -->
 		<div class="content">
-			<div class="cont content_wid">
+			<div class="cont cont_wid">
 				<h1>-Info-</h1>  
-                
-                Cupcake ipsum dolor sit amet apple pie. Biscuit cake cupcake gummies candy lemon drops apple pie. Cake gingerbread pie sesame snaps oat cake. Topping tiramisu powder lemon drops. Sweet donut pastry soufflé. Marshmallow gummies icing chupa chups cookie macaroon sugar plum. Sweet cake dragée marzipan dragée bonbon lemon drops. Chocolate cake tart tootsie roll croissant. Sweet marshmallow toffee cake dessert pudding. Sweet roll candy lollipop muffin gummies. <br> <br>
-Fruitcake sesame snaps powder chocolate. Topping gingerbread macaroon powder chupa chups biscuit tootsie roll cupcake wafer. Cookie chocolate bar bonbon ice cream tart. Marzipan sesame snaps gummi bears bear claw biscuit. Donut wafer dragée macaroon. Gummi bears fruitcake oat cake liquorice powder. Powder cookie chocolate ice cream chocolate bar pudding lemon drops candy macaroon. Gummi bears halvah brownie jujubes gingerbread. Pastry brownie pudding gingerbread macaroon. Liquorice chupa chups chocolate cake.
-                              
+
+				Cupcake ipsum dolor sit amet apple pie. Biscuit cake cupcake gummies candy lemon drops apple pie. Cake gingerbread pie sesame snaps oat cake. Topping tiramisu powder lemon drops. Sweet donut pastry soufflé. Marshmallow gummies icing chupa chups cookie macaroon sugar plum. Sweet cake dragée marzipan dragée bonbon lemon drops. Chocolate cake tart tootsie roll croissant. Sweet marshmallow toffee cake dessert pudding. Sweet roll candy lollipop muffin gummies. <br> <br>
+				Fruitcake sesame snaps powder chocolate. Topping gingerbread macaroon powder chupa chups biscuit tootsie roll cupcake wafer. Cookie chocolate bar bonbon ice cream tart. Marzipan sesame snaps gummi bears bear claw biscuit. Donut wafer dragée macaroon. Gummi bears fruitcake oat cake liquorice powder. Powder cookie chocolate ice cream chocolate bar pudding lemon drops candy macaroon. Gummi bears halvah brownie jujubes gingerbread. Pastry brownie pudding gingerbread macaroon. Liquorice chupa chups chocolate cake.
+
 			</div>
 		</div>
 
@@ -118,15 +108,6 @@ Fruitcake sesame snaps powder chocolate. Topping gingerbread macaroon powder chu
 			</div>
 		</div>
 	</div>
-    
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script>
-		document.getElementById("page_name").innerHTML = "Room 1";
-		if ($(window).width() <= 768) {
-		    document.getElementById("title").innerHTML = "CS Club";
-			location.reload();
-		}
-	</script>
 
 </body>
 </html>

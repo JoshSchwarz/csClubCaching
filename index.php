@@ -10,7 +10,7 @@ session_start();
 
 <html>
 <head>
-	<title>Computer Science Club O-Week</title>
+	<title>Home</title>
 	<link href="css/edsWIP.css" type="text/css" rel="stylesheet"></link>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
 	{
 		function __construct()
 		{
-			$this->open('./rooms/store.db');
+			$this->open('./db/store.db');
 		}
 	}
 	
@@ -44,15 +44,15 @@ if(isset($_POST['submit'])) {
 		$first = $_POST['first'];
 		$last = $_POST['last'];
 		$email = $_POST['email'];
-	
+
 		$sql = "INSERT INTO rooms (SESSIONID,FIRSTNAME,LASTNAME,EMAIL) VALUES (:curSessID,:first,:last,:email)"; 
 		$q = $db->prepare($sql); 
-	
+
 		$q->bindParam(':curSessID',$curSessID);
 		$q->bindParam(':first',$first); 
 		$q->bindParam(':last',$last); 
 		$q->bindParam(':email',$email); 
-	
+
 		$q->execute(); 
 	}
 }
@@ -65,48 +65,37 @@ if(isset($_POST['submit'])) {
 		<div class="header">
 			<div class="cont">
 				<div class="logo_cont">
-					<img class="logo" src="./img/compsci_logo.svg">
+					<img class="logo" src="./img/logo.svg">
 				</div>
 				<div class="title_cont">
-					<div id="title">
+					<div class="title lrg">
 						Computer Science Club
 					</div>
-					<div id="subtitle">
+					<div class="title sml">
+						CS Club
+					</div>
+					<div class="subtitle lrg">
 						// O'Week 2015 Adelaide Uni
+					</div>
+					<div class="subtitle sml">
+						// O'Week 2015
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Navbar -->
-		<div class="navbar">
-				<img class="menu" src="./img/menu.svg">
-				<div id="page_name" class="cont"></div>
-				<div class="cont nav_wid">
-					<div class="nav_opt current">Home</div>
-					<div class="nav_opt">News</div>
-					<div class="nav_opt">Tutorials</div>
-					<div class="nav_opt">Calendar</div>
-					<div class="nav_opt">Contact</div>
-					<!-- <form class="searchbar">
-						<input type="text" name="search" placeholder="Search">
-						<input type="submit" name="submit" value="Go">
-					</form> -->
-				</div>
-		</div>
-
 		<!-- Content -->
 		<div class="content">
-			<div class="cont content_wid">
+			<div class="cont cont_wid">
 				<h1>HOME PAGE INFO.</h1>                
-                <br><br>
-                <h2>Signup for comp</h2>
-                <form action="<?php $_PHP_SELF ?>" method="post">
-                First Name: <input type="text" name="first"><br>
-                Last Name: <input type="text" name="last"><br>
-                E-mail: <input type="text" name="email"><br>
-                <input type="submit" name="submit" id="submit">
-                </form>
+				<br><br>
+				<h2>Signup for comp</h2>
+				<form action="<?php $_PHP_SELF ?>" method="post">
+					First Name: <input type="text" name="first"><br>
+					Last Name: <input type="text" name="last"><br>
+					E-mail: <input type="text" name="email"><br>
+					<input type="submit" name="submit" id="submit">
+				</form>
 			</div>
 		</div>
 
@@ -117,14 +106,6 @@ if(isset($_POST['submit'])) {
 			</div>
 		</div>
 	</div>
-    
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script>
-		document.getElementById("page_name").innerHTML = "Home";
-		if ($(window).width() <= 768) {
-		    document.getElementById("title").innerHTML = "CS Club";
-		}
-	</script>
 
 </body>
 </html>

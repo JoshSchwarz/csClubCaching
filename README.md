@@ -5,3 +5,5 @@ Simple website/server config to allow a signed-in user to be tracked when they a
 Load files onto webserver ensuring that the php user has read write access on the whole directory (including later, the database.)
 Run setup.php to setup initial database (store.db).
 For help and guide to expanding/adding your own points see comments in files.
+
+Rooms: CSLC, Flentje, lvl 2 CAT suite, innova basement, chapman, horace lamb and lvl 4.
