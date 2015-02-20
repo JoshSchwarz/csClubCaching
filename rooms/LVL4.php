@@ -1,17 +1,7 @@
-<!--
--room1.php -
-
-A sample room including user tracking ONLY if they have signed up.
-On page load, checks to see if user is known, if so updates the database to show that they have visted room and serves content.
-If user is unknown, content is still served.
-
-Code by Josh Schwarz
--->
-
 <!doctype html>
 <html>
 <head>
-	<title>Room1</title>
+	<title>Ingkarni Wardli Level 4</title>
 	<link href="../css/edsWIP.css" type="text/css" rel="stylesheet"></link>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -46,7 +36,7 @@ $row = $exists->fetchArray();
 if ($row != false) {
 	
 	//Checks if user has already visited.
-	$sql = $db->prepare('SELECT * FROM rooms WHERE room1 = 1 AND sessionid = :id;');
+	$sql = $db->prepare('SELECT * FROM rooms WHERE LVL4 = 1 AND sessionid = :id;');
 	$sql->bindValue(':id', $curSessID);
 	$visited = $sql->execute();
 	
@@ -54,7 +44,7 @@ if ($row != false) {
 	$row = $visited->fetchArray();
 	if($row == false) {
 		//NOTE: after 'SET' should be a roomID matching a column in the database. Check -setup.php- for a list of room ID's.
-		$q = $db->prepare('UPDATE rooms SET room1 = 1 WHERE SESSIONID = :id;');
+		$q = $db->prepare('UPDATE rooms SET LVL4 = 1 WHERE SESSIONID = :id;');
 		$q->bindValue(':id', $curSessID);
 		$q->execute();
 		
@@ -75,10 +65,10 @@ if ($row != false) {
 				</div>
 				<div class="title_cont">
 					<div class="title lrg">
-						Room1 <!-- Full Room Name (DESKTOP VIEW) -->
+						Ingkarni Wardli Level 4 <!-- Full Room Name (DESKTOP VIEW) -->
 					</div>
 					<div class="title sml">
-						Rm1 <!-- Small Room Name (MOBILE VIEW) -->
+						Level 4 <!-- Small Room Name (MOBILE VIEW) -->
 					</div>
 					<div class="subtitle lrg">
 						// Computer Science Club <!-- Full Subtitle (DESKTOP VIEW) -->

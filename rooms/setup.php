@@ -1,5 +1,5 @@
 <?php
-//Open database (If database doesnt exist /should/ be created.
+//Open database (If database doesnt exist will be created.
 class MyDB extends SQLite3
 {
   function __construct()
@@ -15,9 +15,6 @@ if(!$db){
 }
 
 //Creates table.
-//SESSIONID through EMAIL are required by code.
-//ROOM1 is an example roomID that can be changed to any ID.
-//NOTE: Must be one roomID column per room.
 $sql =<<<EOF
   CREATE TABLE ROOMS
   (SESSIONID INT PRIMARY KEY     NOT NULL,
@@ -25,8 +22,13 @@ $sql =<<<EOF
   LASTNAME 		 TEXT 	  NOT NULL,
   EMAIL          TEXT     NOT NULL,
   SUM 			 INT	  NOT NULL 		DEFAULT 0,
-  ROOM1 		 INT,
-  ROOM2 		 INT);
+  EM110 		 INT,
+  FLENT 		 INT,
+  CAT2 			 INT,
+  LVLB			 INT,
+  CHAPM 		 INT,
+  LVL4 			 INT,
+  HORLA			 INT);
 EOF;
 
 $ret = $db->exec($sql);
