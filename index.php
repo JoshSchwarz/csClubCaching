@@ -96,6 +96,15 @@ if(isset($_POST['submit'])) {
 					E-mail: <input type="text" name="email"><br>
 					<input type="submit" name="submit" id="submit">
 				</form>
+                
+                <a href="rooms/EM110.php">CSLC</a>
+                <a href="rooms/FLENT.php">Flentje</a>
+                <a href="rooms/CAT2.php">CAT Suite lvl 2</a>
+                <a href="rooms/LVLB.php">Basement</a>
+                <a href="rooms/CHAPM.php">Chapman</a>
+                <a href="rooms/LVL4.php">Level 4</a>
+                <a href="rooms/HORLA.php">Horace Lamb</a>
+                
 			</div>
 		</div>
 
