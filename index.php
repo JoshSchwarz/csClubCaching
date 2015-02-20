@@ -88,22 +88,23 @@ if(isset($_POST['submit'])) {
 		<div class="content">
 			<div class="cont cont_wid">
 				<h1>HOME PAGE INFO.</h1>                
-				<br><br>
-				<h2>Signup for comp</h2>
+				<br>
+				<h2>Signup for competition</h2>
+                <h3>Win some fully sik prizez</h3>
 				<form action="<?php $_PHP_SELF ?>" method="post">
 					First Name: <input type="text" name="first"><br>
-					Last Name: <input type="text" name="last"><br>
-					E-mail: <input type="text" name="email"><br>
+					Last Name:  <input type="text" name="last"><br>
+					E-mail:     <input type="text" name="email"><br>
 					<input type="submit" name="submit" id="submit">
 				</form>
-                
-                <a href="rooms/EM110.php">CSLC</a>
-                <a href="rooms/FLENT.php">Flentje</a>
-                <a href="rooms/CAT2.php">CAT Suite lvl 2</a>
-                <a href="rooms/LVLB.php">Basement</a>
-                <a href="rooms/CHAPM.php">Chapman</a>
-                <a href="rooms/LVL4.php">Level 4</a>
-                <a href="rooms/HORLA.php">Horace Lamb</a>
+                <br>
+                <a href="rooms/EM110.php">CSLC</a><br><br>
+                <a href="rooms/FLENT.php">Flentje</a><br><br>
+                <a href="rooms/CAT2.php">CAT Suite lvl 2</a><br><br>
+                <a href="rooms/LVLB.php">Basement</a><br><br>
+                <a href="rooms/CHAPM.php">Chapman</a><br><br>
+                <a href="rooms/LVL4.php">Level 4</a><br><br>
+                <a href="rooms/HORLA.php">Horace Lamb</a><br><br>
                 
 			</div>
 		</div>
