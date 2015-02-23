@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Level 2 CAT Suite</title>
+	<title>Ingkarni Wardli Basment</title>
 	<link href="../css/edsWIP.css" type="text/css" rel="stylesheet"></link>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -65,10 +65,10 @@ if ($row != false) {
 				</div>
 				<div class="title_cont">
 					<div class="title lrg">
-						Level 2 CAT Suite <!-- Full Room Name (DESKTOP VIEW) -->
+						Ingkarni Wardli 218 <!-- Full Room Name (DESKTOP VIEW) -->
 					</div>
 					<div class="title sml">
-						LVL2 CAT Suite <!-- Small Room Name (MOBILE VIEW) -->
+						Room 218 <!-- Small Room Name (MOBILE VIEW) -->
 					</div>
 					<div class="subtitle lrg">
 						// Computer Science Club <!-- Full Subtitle (DESKTOP VIEW) -->
@@ -84,7 +84,9 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>Room 218 offers exquisite views of a lawn and a whole bunch of computers. You may be in this room for Object Oriented Programming (OOP) workshops.</p>
+<p>Down the hall you will find room 236 where <a href="https://forums.cs.adelaide.edu.au/course/view.php?id=579">Cyber Security Challenge</a> sessions are run fortnightly at 5pm Tuesday.</p>
+<p>Older students know this building as Innova.</p>
 			</div>
 		</div>
 

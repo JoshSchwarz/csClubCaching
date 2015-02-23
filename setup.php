@@ -28,7 +28,8 @@ $sql =<<<EOF
   LVLB			 INT,
   CHAPM 		 INT,
   LVL4 			 INT,
-  HORLA			 INT);
+  HORLA			 INT,
+  GRND 			 INT);
 EOF;
 
 $ret = $db->exec($sql);

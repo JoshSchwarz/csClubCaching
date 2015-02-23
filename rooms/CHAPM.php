@@ -84,7 +84,7 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>Many 1st year Computer Science Courses have a few lectures here. There is easy access to the Ingkarni Wardli building if you walk west, and easy access to the engineering maths building just to the east.</p>
 			</div>
 		</div>
 

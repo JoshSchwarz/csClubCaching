@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>CSLC</title>
+	<title>Chapman Lecture Theatre</title>
 	<link href="../css/edsWIP.css" type="text/css" rel="stylesheet"></link>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -36,7 +36,7 @@ $row = $exists->fetchArray();
 if ($row != false) {
 	
 	//Checks if user has already visited.
-	$sql = $db->prepare('SELECT * FROM rooms WHERE EM110 = 1 AND sessionid = :id;');
+	$sql = $db->prepare('SELECT * FROM rooms WHERE GRND = 1 AND sessionid = :id;');
 	$sql->bindValue(':id', $curSessID);
 	$visited = $sql->execute();
 	
@@ -44,7 +44,7 @@ if ($row != false) {
 	$row = $visited->fetchArray();
 	if($row == false) {
 		//NOTE: after 'SET' should be a roomID matching a column in the database. Check -setup.php- for a list of room ID's.
-		$q = $db->prepare('UPDATE rooms SET EM110 = 1 WHERE SESSIONID = :id;');
+		$q = $db->prepare('UPDATE rooms SET GRND = 1 WHERE SESSIONID = :id;');
 		$q->bindValue(':id', $curSessID);
 		$q->execute();
 		
@@ -65,10 +65,10 @@ if ($row != false) {
 				</div>
 				<div class="title_cont">
 					<div class="title lrg">
-						Computer Science Learning Center <!-- Full Room Name (DESKTOP VIEW) -->
+						Ingkarni Wardli Ground Floor <!-- Full Room Name (DESKTOP VIEW) -->
 					</div>
 					<div class="title sml">
-						CSLC <!-- Small Room Name (MOBILE VIEW) -->
+						Ground Floor <!-- Small Room Name (MOBILE VIEW) -->
 					</div>
 					<div class="subtitle lrg">
 						// Computer Science Club <!-- Full Subtitle (DESKTOP VIEW) -->
@@ -84,9 +84,8 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-				The CSLC offers an area for computer science students to study and discuss ideas. 'on-demand' tutoring is provided in this room, the request form is available from the <a href="https://cs.adelaide.edu.au/current-students/learning-centre/tutor-booking.html">CSLC tutor booking form</a>
-All students studying a computer science course have 24/7 swipe card access to this room. <br>
-On the rest of this level are various CAT suites that you may have practicals in, and at the end of the corridor is the 1st year maths help centre.
+				<p>On this floor is Aroma Cafe, some lounging space and a CAT suite (G22). The Computer Science Club will be running workshops on how to use unix on the 5th and 12th of March from 12-1pm in G22.</p>
+				<p>Older students know this building as Innova.</p>
 			</div>
 		</div>
 

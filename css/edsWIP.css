@@ -153,6 +153,10 @@ ul {
 	border-top: solid 1px #8CC8DD;
 }
 
+#signup {
+	visibility:hidden;
+	position:fixed;
+}
 
 /*------- FOOTER -------*/
 .footer {

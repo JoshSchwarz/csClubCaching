@@ -84,7 +84,8 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>A common level to have tutorials and workshops, other than a vending machine, printer/photocopier, bins, toilets, and a bunch of CAT suites there's not much.</p>
+				<p>Older students know this building as Innova.</p>
 			</div>
 		</div>
 

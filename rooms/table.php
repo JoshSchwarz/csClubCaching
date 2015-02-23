@@ -17,15 +17,21 @@
    $db = new MyDB();
 
    $sql =<<<EOF
-      SELECT * from ROOMS;
+      SELECT * from ROOMS ORDER BY sum DESC;
 EOF;
 
    $ret = $db->query($sql);
    while($row = $ret->fetchArray() ){
-      echo "ID = ". $row['SESSIONID'] . "<br>";
-      echo "NAME = ". $row['FIRSTNAME'] . " " . $row['LASTNAME'] ."<br>";
-      echo "EMAIL = ". $row['EMAIL'] ."<br>";
-      echo "SUM =  ". $row['SUM'] ."<br><br>";
+      $str1 = "ID = ". $row['SESSIONID'];
+      $str2 = "NAME = ". $row['FIRSTNAME'] . " " . $row['LASTNAME'];
+      $str3 = "EMAIL = ". $row['EMAIL'];
+      $str4 = "SUM =  ". $row['SUM'];
+	  
+	  echo htmlspecialchars($str1) . "<br>";
+	  echo htmlspecialchars($str2) . "<br>";
+	  echo htmlspecialchars($str3) . "<br>";
+	  echo htmlspecialchars($str4) . "<br><br>";
+	  
    }
    $db->close();
 ?>

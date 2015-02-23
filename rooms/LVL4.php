@@ -84,7 +84,7 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>Home to the School of Computer Science front desk, if you have any questions or paperwork for the school this is where you bring them. Computer science staff have their offices on this level, as well as level 5. There is also an area where you can work quietly and small meeting rooms avaliable.</p>
 			</div>
 		</div>
 

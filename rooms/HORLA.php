@@ -84,7 +84,7 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>This is a lecture theatre you're likely to have something in at some point, it is adjacent to the university health practice and counselling services.</p>
 			</div>
 		</div>
 

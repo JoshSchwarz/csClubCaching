@@ -65,7 +65,7 @@ if ($row != false) {
 				</div>
 				<div class="title_cont">
 					<div class="title lrg">
-						Flentje Lecture Theater <!-- Full Room Name (DESKTOP VIEW) -->
+						Flentje Lecture Theatre <!-- Full Room Name (DESKTOP VIEW) -->
 					</div>
 					<div class="title sml">
 						Flentje <!-- Small Room Name (MOBILE VIEW) -->
@@ -84,7 +84,7 @@ if ($row != false) {
 		<div class="content">
 			<div class="cont cont_wid">
             	<!-- CONTENT -->
-
+				<p>One of the most annoying lecture theatres to pronounce, let's just go with Flen-gee. You'll have some lectures in here at some point, everyone does.</p>
 			</div>
 		</div>
 
